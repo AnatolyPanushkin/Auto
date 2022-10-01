@@ -128,7 +128,8 @@ namespace Auto.Data {
         
         
         
-        public Owner FindOwnerBySurname(string surname) => owners.GetValueOrDefault(surname);
+        public Owner FindOwnerBySurname(string surname) => 
+            owners.FirstOrDefault(n=>n.Value.Surname.ToString().Equals(surname)).Value;
 
         public Owner FindOwnerByPhoneNumber(string phoneNumber) =>
             owners.FirstOrDefault(o => o.Value.PhoneNumber == phoneNumber).Value;

@@ -64,28 +64,23 @@ public class OwnersController:ControllerBase
     
     
     
-    [HttpPost]
-    [Produces("application/hal+json")]
-    [Route("delete/{name}")]
-    public IActionResult Remove(string name)
+    [HttpDelete("{surname}")]
+    public IActionResult Remove(string surname)
     {
-        var owner = db.FindOwnerBySurname(name);
+        var owner = db.FindOwnerBySurname(surname);
         db.DeleteOwner(owner);
         return Ok(owner);
     }
     
-    [HttpPut]
-    [Route("update/{name}")]
-    public IActionResult Put(string name, [FromBody] dynamic owner) {
-
-        var ownerHref = owner._links.vehicles?.href;
-        var vehicleRegistration = VehiclesController.ParseVehicle(ownerHref);
-        var ownerVehicle = db.FindVehicle(vehicleRegistration);
+    [HttpPut("{surname}")]
+    public IActionResult Put(string surname, [FromBody] OwnerDto owner) {
+        
+        var ownerVehicle = db.FindVehicle(owner.VehicleOfOwner);
 
         var newOwner = new Owner
         {   
             Name = owner.Name,
-            Surname = owner.Surname,
+            Surname = surname,
             PhoneNumber = owner.PhoneNumber,
             VehicleOfOwner = ownerVehicle
         };
@@ -93,6 +88,23 @@ public class OwnersController:ControllerBase
         db.UpdateOwner(newOwner);
         
         return Get(newOwner.Surname);
+    }
+    
+    [HttpPost]
+    public async Task<IActionResult> Add([FromBody] OwnerDto dto)
+    {
+
+        var newVehicle = db.FindVehicle(dto.VehicleOfOwner);
+        
+        var newOwner = new Owner {
+            Name = dto.Name,
+            Surname = dto.Surname,
+            PhoneNumber = dto.PhoneNumber,
+            VehicleOfOwner = newVehicle
+        };
+        db.CreateOwner(newOwner);
+			
+        return Ok(dto);
     }
     
     private dynamic Paginate(string url, int index, int count, int total)
