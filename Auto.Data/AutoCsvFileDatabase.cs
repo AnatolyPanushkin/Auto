@@ -44,7 +44,7 @@ namespace Auto.Data {
                 
                 owner.VehicleOfOwner = vehiclesForOwner;
                 
-                owners.Add(vehiclesForOwner.Registration,owner);
+                owners[owner.VehicleOfOwner.Registration]=owner;
             }
         }
 
@@ -137,17 +137,17 @@ namespace Auto.Data {
 
         public void CreateOwner(Owner owner)
         {
-            owners.Add(owner.VehicleOfOwner.Registration.ToString()!,owner);
+            owners.Add(owner.VehicleOfOwner.Registration,owner);
         }
 
         public void UpdateOwner(Owner owner)
         {
-            owners[owner.VehicleOfOwner.Registration.ToString()!] = owner;
+            owners[owner.VehicleOfOwner.Registration] = owner;
         }
 
         public void DeleteOwner(Owner owner)
         {
-            owners.Remove(owner.VehicleOfOwner.Registration?.ToString()!);
+            owners.Remove(owner.VehicleOfOwner.Registration);
         }
 
 
