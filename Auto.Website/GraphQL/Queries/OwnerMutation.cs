@@ -19,6 +19,7 @@ public class OwnerMutation: ObjectGraphType
                 new QueryArgument<NonNullGraphType<StringGraphType>> {Name = "Name"},
                 new QueryArgument<NonNullGraphType<StringGraphType>> {Name = "Surname"},
                 new QueryArgument<NonNullGraphType<StringGraphType>> {Name = "PhoneNumber"},
+                new QueryArgument<NonNullGraphType<StringGraphType>>{Name = "Email"},
                 new QueryArgument<NonNullGraphType<StringGraphType>> {Name = "Registration"}
             ),
             resolve: ownerContex =>
@@ -26,6 +27,7 @@ public class OwnerMutation: ObjectGraphType
                 var name = ownerContex.GetArgument<string>("Name");
                 var surname = ownerContex.GetArgument<string>("Surname");
                 var phoneNumber = ownerContex.GetArgument<string>("PhoneNumber");
+                var email = ownerContex.GetArgument<string>("Email");
                 var registration = ownerContex.GetArgument<string>("Registration");
 
                 var newVehicle = db.FindVehicle(registration);
@@ -35,6 +37,7 @@ public class OwnerMutation: ObjectGraphType
                     Name = name,
                     Surname = surname,
                     PhoneNumber = phoneNumber,
+                    Email = email,
                     VehicleOfOwner = newVehicle
                 };
                 
@@ -51,12 +54,14 @@ public class OwnerMutation: ObjectGraphType
                 new QueryArgument<NonNullGraphType<StringGraphType>> {Name = "Name"},
                 new QueryArgument<NonNullGraphType<StringGraphType>> {Name = "Surname"},
                 new QueryArgument<NonNullGraphType<StringGraphType>> {Name = "PhoneNumber"},
+                new QueryArgument<NonNullGraphType<StringGraphType>>{Name = "Email"},
                 new QueryArgument<NonNullGraphType<StringGraphType>> {Name = "Registration"}
             ),resolve: ownerContex =>
             {
                 var name = ownerContex.GetArgument<string>("Name");
                 var surname = ownerContex.GetArgument<string>("Surname");
                 var phoneNumber = ownerContex.GetArgument<string>("PhoneNumber");
+                var email = ownerContex.GetArgument<string>("Email");
                 var registration = ownerContex.GetArgument<string>("Registration");
                 
                 var newVehicle = db.FindVehicle(registration);
@@ -66,10 +71,11 @@ public class OwnerMutation: ObjectGraphType
                     Name = name,
                     Surname = surname,
                     PhoneNumber = phoneNumber,
+                    Email = email,
                     VehicleOfOwner = newVehicle
                 };
                 
-                db.UpdateOwner(updateOwner);
+                db.UpdateOwner(email,updateOwner);
                 
                 
                 return updateOwner;

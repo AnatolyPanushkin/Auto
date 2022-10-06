@@ -36,11 +36,12 @@ namespace Auto.Data {
                 {
                     Surname = tokens[0],
                     Name = tokens[1],
-                    PhoneNumber = tokens[2]
+                    PhoneNumber = tokens[2],
+                    Email = tokens[3]
                 };
 
                 var vehiclesForOwner = this.vehicles.FirstOrDefault(e =>
-                    e.Value.Registration.Equals(tokens[3])).Value;
+                    e.Value.Registration.Equals(tokens[4])).Value;
                 
                 owner.VehicleOfOwner = vehiclesForOwner;
                 
@@ -133,21 +134,24 @@ namespace Auto.Data {
 
         public Owner FindOwnerByPhoneNumber(string phoneNumber) =>
             owners.FirstOrDefault(o => o.Value.PhoneNumber == phoneNumber).Value;
+
+        public Owner FindOwnerByEmail(string email) => 
+            owners.FirstOrDefault(e => e.Value.Email.Equals(email)).Value;
         
 
         public void CreateOwner(Owner owner)
         {
-            owners.Add(owner.VehicleOfOwner.Registration,owner);
+            owners.Add(owner.Email,owner);
         }
 
-        public void UpdateOwner(Owner owner)
+        public void UpdateOwner(string email, Owner owner)
         {
-            owners[owner.VehicleOfOwner.Registration] = owner;
+            owners[email] = owner;
         }
 
         public void DeleteOwner(Owner owner)
         {
-            owners.Remove(owner.VehicleOfOwner.Registration);
+            owners.Remove(owner.Email);
         }
 
 

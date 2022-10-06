@@ -21,10 +21,12 @@ namespace Auto.Data {
 
 		public Owner FindOwnerBySurname(string name);
 		public Owner FindOwnerByPhoneNumber(string phoneNumber);
+
+		public Owner FindOwnerByEmail(string email);
 		
 		
 		public void CreateOwner(Owner owner);
-		public void UpdateOwner(Owner owner);
+		public void UpdateOwner(string email,Owner owner);
 		public void DeleteOwner(Owner owner);
 		
 

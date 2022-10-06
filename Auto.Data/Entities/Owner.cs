@@ -12,6 +12,8 @@ public partial class Owner
     
     public string PhoneNumber { get; set; }
     
+    public string Email { get; set; }
+    
     [JsonIgnore]
     public virtual Vehicle VehicleOfOwner{ get; set; }
 }

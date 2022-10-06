@@ -45,28 +45,28 @@ public class OwnersController:ControllerBase
         
     }
 
-    [HttpGet("{surname}")]
-    public async Task<IActionResult> Get(string surname)
+    [HttpGet("{email}")]
+    public async Task<IActionResult> Get(string email)
     {
         try
         {
-            var owner = _db.FindOwnerBySurname(surname);
+            var owner = _db.FindOwnerByEmail(email);
             if (owner == default) return NotFound();
         
             var json = owner.ToDynamic();
             json._links = new {
-                self = new { href = $"/api/owners/{surname}" },
+                self = new { href = $"/api/owners/{email}" },
                 vehicle = new { href = $"/api/vehicle/{owner.VehicleOfOwner.Registration}" }
             };
             json._actions = new {
                 update = new {
                     method = "PUT",
-                    href = $"/api/owners/{surname}",
+                    href = $"/api/owners/{email}",
                     accept = "application/json"
                 },
                 delete = new {
                     method = "DELETE",
-                    href = $"/api/owners/{surname}"
+                    href = $"/api/owners/{email}"
                 }
             };
             return Ok(json);
@@ -81,12 +81,12 @@ public class OwnersController:ControllerBase
     
     
     
-    [HttpDelete("{surname}")]
-    public async Task<IActionResult> Remove(string surname)
+    [HttpDelete("{email}")]
+    public async Task<IActionResult> Remove(string email)
     {
         try
         {
-            var owner = _db.FindOwnerBySurname(surname);
+            var owner = _db.FindOwnerByEmail(email);
             _db.DeleteOwner(owner);
             return Ok(owner);
 
@@ -97,8 +97,8 @@ public class OwnersController:ControllerBase
         }
     }
     
-    [HttpPut("{surname}")]
-    public async Task<IActionResult> Put(string surname, [FromBody] OwnerDto owner) 
+    [HttpPut("{email}")]
+    public async Task<IActionResult> Put(string email, [FromBody] OwnerDto owner) 
     {
         try
         {
@@ -107,27 +107,28 @@ public class OwnersController:ControllerBase
             var newOwner = new Owner
             {   
                 Name = owner.Name,
-                Surname = surname,
+                Surname = owner.Surname,
                 PhoneNumber = owner.PhoneNumber,
+                Email = owner.Email,
                 VehicleOfOwner = ownerVehicle
             };
         
-            _db.UpdateOwner(newOwner);
+            _db.UpdateOwner(email,newOwner);
             
             var json = newOwner.ToDynamic();
             json._links = new {
-                self = new { href = $"/api/owners/{newOwner.Surname}" },
+                self = new { href = $"/api/owners/{newOwner.Email}" },
                 vehicle = new { href = $"/api/vehicle/{newOwner.VehicleOfOwner.Registration}" }
             };
             json._actions = new {
                 update = new {
                     method = "PUT",
-                    href = $"/api/owners/{newOwner.Surname}",
+                    href = $"/api/owners/{newOwner.Email}",
                     accept = "application/json"
                 },
                 delete = new {
                     method = "DELETE",
-                    href = $"/api/owners/{newOwner.Surname}"
+                    href = $"/api/owners/{newOwner.Email}"
                 }
             };
         
@@ -151,24 +152,25 @@ public class OwnersController:ControllerBase
                 Name = dto.Name,
                 Surname = dto.Surname,
                 PhoneNumber = dto.PhoneNumber,
+                Email = dto.Email,
                 VehicleOfOwner = newVehicle
             };
             _db.CreateOwner(newOwner);
 			
             var json = newOwner.ToDynamic();
             json._links = new {
-                self = new { href = $"/api/owners/{newOwner.Surname}" },
+                self = new { href = $"/api/owners/{newOwner.Email}" },
                 vehicle = new { href = $"/api/vehicle/{newOwner.VehicleOfOwner.Registration}" }
             };
             json._actions = new {
                 update = new {
                     method = "PUT",
-                    href = $"/api/owners/{newOwner.Surname}",
+                    href = $"/api/owners/{newOwner.Email}",
                     accept = "application/json"
                 },
                 delete = new {
                     method = "DELETE",
-                    href = $"/api/owners/{newOwner.Surname}"
+                    href = $"/api/owners/{newOwner.Email}"
                 }
             };
             
