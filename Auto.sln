@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auto.Data", "Auto.Data\Auto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMessages", "AutoMessages\AutoMessages.csproj", "{A1D6C1D9-02E2-472C-8F2E-FFCA125C5705}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auto.AuditLog", "Auto.AuditLog\Auto.AuditLog.csproj", "{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{A1D6C1D9-02E2-472C-8F2E-FFCA125C5705}.Release|x64.Build.0 = Release|Any CPU
 		{A1D6C1D9-02E2-472C-8F2E-FFCA125C5705}.Release|x86.ActiveCfg = Release|Any CPU
 		{A1D6C1D9-02E2-472C-8F2E-FFCA125C5705}.Release|x86.Build.0 = Release|Any CPU
+		{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}.Debug|x64.Build.0 = Debug|Any CPU
+		{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}.Debug|x86.Build.0 = Debug|Any CPU
+		{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}.Release|x64.ActiveCfg = Release|Any CPU
+		{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}.Release|x64.Build.0 = Release|Any CPU
+		{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}.Release|x86.ActiveCfg = Release|Any CPU
+		{BD148CE4-BD99-4AF7-9ADB-5AA118F922D6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
