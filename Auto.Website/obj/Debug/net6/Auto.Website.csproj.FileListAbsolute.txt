@@ -164,3 +164,8 @@ D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\System.Reactive.Core.dll
 D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\System.Reactive.Linq.dll
 D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\System.Reactive.dll
 D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\System.Reactive.xml
+D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\EasyNetQ.dll
+D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\RabbitMQ.Client.dll
+D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\AutoMessages.dll
+D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\AutoMessages.pdb
+D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\csv-data\owners.csv

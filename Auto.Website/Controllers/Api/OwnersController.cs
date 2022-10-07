@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Auto.Data;
 using Auto.Data.Entities;
 using Auto.Website.Models;
+using AutoMessages;
+using EasyNetQ;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Auto.Website.Controllers.Api;
@@ -16,10 +18,12 @@ namespace Auto.Website.Controllers.Api;
 public class OwnersController:ControllerBase
 {
     private readonly IAutoDatabase _db;
+    private readonly IBus _bus;
 
-    public OwnersController(IAutoDatabase db)
+    public OwnersController(IAutoDatabase db,IBus bus)
     {
         _db = db;
+        _bus = bus;
     }
 
     [HttpGet]
@@ -156,6 +160,7 @@ public class OwnersController:ControllerBase
                 VehicleOfOwner = newVehicle
             };
             _db.CreateOwner(newOwner);
+            PublishNewOwnerMessage(newOwner);
 			
             var json = newOwner.ToDynamic();
             json._links = new {
@@ -182,6 +187,21 @@ public class OwnersController:ControllerBase
         }
         
     }
+
+    private void PublishNewOwnerMessage(Owner owner)
+    {
+        var message = new NewOwnerMessage()
+        {
+            Name = owner.Name,
+            Surname = owner.Surname,
+            PhoneNumber = owner.PhoneNumber,
+            Email = owner.Email,
+            VehicleOfOwner = owner.VehicleOfOwner.Registration,
+            ListedAtUtc = DateTime.UtcNow
+        };
+        _bus.PubSub.Publish(message);
+    }
+    
     
     private dynamic Paginate(string url, int index, int count, int total)
     {
@@ -193,7 +213,4 @@ public class OwnersController:ControllerBase
         if (index + count < total) links.next = new {href = $"{url}?index={index + count}&count={count}"};
         return links;
     }
-    
-    
-    
 }

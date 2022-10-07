@@ -32,3 +32,4 @@ D:\Projects C#\AutoProject\Auto.Data\obj\Debug\net6\refint\Auto.Data.dll
 D:\Projects C#\AutoProject\Auto.Data\obj\Debug\net6\Auto.Data.pdb
 D:\Projects C#\AutoProject\Auto.Data\obj\Debug\net6\Auto.Data.genruntimeconfig.cache
 D:\Projects C#\AutoProject\Auto.Data\obj\Debug\net6\ref\Auto.Data.dll
+D:\Projects C#\AutoProject\Auto.Data\bin\Debug\net6\csv-data\owners.csv

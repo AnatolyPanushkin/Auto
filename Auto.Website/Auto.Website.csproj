@@ -9,6 +9,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="EasyNetQ" Version="7.2.0" />
 		<PackageReference Include="GraphQL" Version="4.6.1" />
 		<PackageReference Include="GraphQL.MicrosoftDI" Version="4.6.1" />
 		<PackageReference Include="GraphQL.Server.Transports.AspNetCore.SystemTextJson" Version="5.2.2" />
@@ -22,5 +23,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Auto.Data\Auto.Data.csproj" />
+		<ProjectReference Include="..\AutoMessages\AutoMessages.csproj" />
 	</ItemGroup>
 </Project>
