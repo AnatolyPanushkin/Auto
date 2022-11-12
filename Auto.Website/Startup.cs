@@ -8,10 +8,13 @@ using System;
 using System.IO;
 using System.Reflection;
 using Auto.Website.GraphQL.Schemas;
+using Auto.Website.Hubs;
 using EasyNetQ;
 using GraphQL.Server;
 using GraphQL.Types;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.SignalR;
+
 
 namespace Auto.Website {
     public class Startup {
@@ -26,7 +29,7 @@ namespace Auto.Website {
             services.AddRouting(options => options.LowercaseUrls = true);
             services.AddControllersWithViews().AddNewtonsoftJson();
             services.AddSingleton<IAutoDatabase, AutoCsvFileDatabase>();
-            
+            services.AddSignalR();
             services.AddScoped<ISchema,AutoSchema>();
             services.AddScoped<ISchema,AutoSchema>();
             services.AddGraphQL(options => { options.EnableMetrics = true; }).AddSystemTextJson();
@@ -43,6 +46,7 @@ namespace Auto.Website {
             
             var bus = RabbitHutch.CreateBus(Configuration.GetConnectionString("AutoRabbitMQ"));
             services.AddSingleton<IBus>(bus);
+            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
@@ -58,7 +62,7 @@ namespace Auto.Website {
             app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseRouting();
-
+            //app.MapHub<AutoHub>("/hub");
             app.UseSwagger();
             app.UseSwaggerUI();
             app.UseGraphQL<ISchema>();

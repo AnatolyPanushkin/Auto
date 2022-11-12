@@ -1,0 +1,2 @@
+obj\Debug\net6.0/OwnerInfo.cs \
+obj\Debug\net6.0/OwnerInfoGrpc.cs: ../Auto.InfoOwnerServer/Protos/ownerInfo.proto

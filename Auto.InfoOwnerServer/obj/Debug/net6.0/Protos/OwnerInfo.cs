@@ -24,11 +24,11 @@ namespace Auto.InfoOwnerServer {
     static OwnerInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQcm90b3Mvb3duZXJJbmZvLnByb3RvEgVncmVldCIhChBPd25lckluZm9S",
-            "ZXF1ZXN0Eg0KBWVtYWlsGAEgASgJIkUKDk93bmVySW5mb1JlcGx5EgwKBE5h",
-            "bWUYASABKAkSDwoHU3VybmFtZRgCIAEoCRIUCgxSZWdpc3RyYXRpb24YAyAB",
-            "KAkySwoJT3duZXJJbmZvEj4KDEdldE93bmVySW5mbxIXLmdyZWV0Lk93bmVy",
-            "SW5mb1JlcXVlc3QaFS5ncmVldC5Pd25lckluZm9SZXBseUIXqgIUQXV0by5J",
+            "ChZQcm90b3Mvb3duZXJJbmZvLnByb3RvEgVvd25lciIhChBPd25lckluZm9S",
+            "ZXF1ZXN0Eg0KBWVtYWlsGAEgASgJIkUKDk93bmVySW5mb1JlcGx5EgwKBG5h",
+            "bWUYASABKAkSDwoHc3VybmFtZRgCIAEoCRIUCgxyZWdpc3RyYXRpb24YAyAB",
+            "KAkySwoJT3duZXJJbmZvEj4KDEdldE93bmVySW5mbxIXLm93bmVyLk93bmVy",
+            "SW5mb1JlcXVlc3QaFS5vd25lci5Pd25lckluZm9SZXBseUIXqgIUQXV0by5J",
             "bmZvT3duZXJTZXJ2ZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -259,7 +259,7 @@ namespace Auto.InfoOwnerServer {
       return new OwnerInfoReply(this);
     }
 
-    /// <summary>Field number for the "Name" field.</summary>
+    /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -270,7 +270,7 @@ namespace Auto.InfoOwnerServer {
       }
     }
 
-    /// <summary>Field number for the "Surname" field.</summary>
+    /// <summary>Field number for the "surname" field.</summary>
     public const int SurnameFieldNumber = 2;
     private string surname_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -281,7 +281,7 @@ namespace Auto.InfoOwnerServer {
       }
     }
 
-    /// <summary>Field number for the "Registration" field.</summary>
+    /// <summary>Field number for the "registration" field.</summary>
     public const int RegistrationFieldNumber = 3;
     private string registration_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

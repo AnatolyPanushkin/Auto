@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option csharp_namespace = "Auto.InfoOwnerServer";
 
-package greet;
+package owner;
 
 // The greeting service definition.
 service OwnerInfo {
@@ -17,7 +17,7 @@ message OwnerInfoRequest {
 
 // The response message containing the greetings.
 message OwnerInfoReply {
-  string Name = 1;
-  string Surname = 2;
-  string Registration=3;
+  string name = 1;
+  string surname = 2;
+  string registration=3;
 }

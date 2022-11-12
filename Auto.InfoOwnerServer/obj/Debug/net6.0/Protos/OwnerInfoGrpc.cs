@@ -13,7 +13,7 @@ namespace Auto.InfoOwnerServer {
   /// </summary>
   public static partial class OwnerInfo
   {
-    static readonly string __ServiceName = "greet.OwnerInfo";
+    static readonly string __ServiceName = "owner.OwnerInfo";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -49,17 +49,17 @@ namespace Auto.InfoOwnerServer {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Auto.InfoOwnerServer.OwnerInfoRequest> __Marshaller_greet_OwnerInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Auto.InfoOwnerServer.OwnerInfoRequest.Parser));
+    static readonly grpc::Marshaller<global::Auto.InfoOwnerServer.OwnerInfoRequest> __Marshaller_owner_OwnerInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Auto.InfoOwnerServer.OwnerInfoRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Auto.InfoOwnerServer.OwnerInfoReply> __Marshaller_greet_OwnerInfoReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Auto.InfoOwnerServer.OwnerInfoReply.Parser));
+    static readonly grpc::Marshaller<global::Auto.InfoOwnerServer.OwnerInfoReply> __Marshaller_owner_OwnerInfoReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Auto.InfoOwnerServer.OwnerInfoReply.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Auto.InfoOwnerServer.OwnerInfoRequest, global::Auto.InfoOwnerServer.OwnerInfoReply> __Method_GetOwnerInfo = new grpc::Method<global::Auto.InfoOwnerServer.OwnerInfoRequest, global::Auto.InfoOwnerServer.OwnerInfoReply>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetOwnerInfo",
-        __Marshaller_greet_OwnerInfoRequest,
-        __Marshaller_greet_OwnerInfoReply);
+        __Marshaller_owner_OwnerInfoRequest,
+        __Marshaller_owner_OwnerInfoReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
