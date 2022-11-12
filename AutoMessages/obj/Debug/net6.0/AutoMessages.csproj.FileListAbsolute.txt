@@ -1,0 +1,12 @@
+D:\Projects C#\AutoProject\AutoMessages\bin\Debug\net6.0\AutoMessages.deps.json
+D:\Projects C#\AutoProject\AutoMessages\bin\Debug\net6.0\AutoMessages.dll
+D:\Projects C#\AutoProject\AutoMessages\bin\Debug\net6.0\AutoMessages.pdb
+D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\AutoMessages.csproj.AssemblyReference.cache
+D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\AutoMessages.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\AutoMessages.AssemblyInfoInputs.cache
+D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\AutoMessages.AssemblyInfo.cs
+D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\AutoMessages.csproj.CoreCompileInputs.cache
+D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\AutoMessages.dll
+D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\refint\AutoMessages.dll
+D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\AutoMessages.pdb
+D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\ref\AutoMessages.dll
