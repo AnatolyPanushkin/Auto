@@ -169,3 +169,9 @@ D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\RabbitMQ.Client.dll
 D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\AutoMessages.dll
 D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\AutoMessages.pdb
 D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\csv-data\owners.csv
+D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\Auto.Website.staticwebassets.runtime.json
+D:\Projects C#\AutoProject\Auto.Website\bin\Debug\net6\System.Net.WebSockets.WebSocketProtocol.dll
+D:\Projects C#\AutoProject\Auto.Website\obj\Debug\net6\Auto.Website.RazorAssemblyInfo.cache
+D:\Projects C#\AutoProject\Auto.Website\obj\Debug\net6\Auto.Website.RazorAssemblyInfo.cs
+D:\Projects C#\AutoProject\Auto.Website\obj\Debug\net6\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Projects C#\AutoProject\Auto.Website\obj\Debug\net6\scopedcss\projectbundle\Auto.Website.bundle.scp.css
