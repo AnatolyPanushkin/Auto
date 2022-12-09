@@ -16,11 +16,11 @@ namespace Auto.AuditLog
         {
             using var bus = RabbitHutch.CreateBus(config.GetConnectionString("AutoRabbitMQ"));
             Console.WriteLine("Connected! Listening for NewVehicleMessage messages.");
-            await bus.PubSub.SubscribeAsync<NewOwnerMessage>(SUBSCRIBER_ID, HandleNewVehicleMessage);
+            await bus.PubSub.SubscribeAsync<NewOwnerMessage>(SUBSCRIBER_ID, HandleNewOwnerMessage);
             Console.ReadKey(true);
         }
 
-        private static void HandleNewVehicleMessage(NewOwnerMessage message)
+        private static void HandleNewOwnerMessage(NewOwnerMessage message)
         {
             var csv =
                 $"{message.Name},{message.Surname},{message.PhoneNumber},{message.Email},{message.VehicleOfOwner},{message.ListedAtUtc:O}";

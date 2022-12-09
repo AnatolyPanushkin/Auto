@@ -9,4 +9,9 @@ public class AutoHub:Hub
     {
         await Clients.All.SendAsync("DisplayNotification", user, message);
     }
+
+    public async Task NotifyWebUsersOwner(string user, string message)
+    {
+        await Clients.All.SendAsync("DisplayNotificationOwner", user, message);
+    }
 }
