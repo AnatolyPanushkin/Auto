@@ -9,12 +9,25 @@
 
     <ItemGroup>
         <Protobuf Include="..\Auto.InfoOwnerServer\Protos\ownerInfo.proto" GrpcServices="Client" />
-      <PackageReference Include="Google.Protobuf" Version="3.21.9" />
-      <PackageReference Include="Grpc.Net.Client" Version="2.49.0" />
-      <PackageReference Include="Grpc.Tools" Version="2.50.0">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
+        <PackageReference Include="Google.Protobuf" Version="3.21.9" />
+        <PackageReference Include="Grpc.Net.Client" Version="2.49.0" />
+        <PackageReference Include="Grpc.Tools" Version="2.50.0" />
+        <PackageReference Include="EasyNetQ" Version="7.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.SignalR.Client.Core" Version="1.1.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AutoMessages\AutoMessages.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

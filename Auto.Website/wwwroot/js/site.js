@@ -18,7 +18,7 @@ function displayNotificationOwner(user, json) {
     console.log(json);
     var $target = $('div#signalr-notifications');
     var data = JSON.parse(json);
-    var message = `NEW OWNER! <a href="/api/owners/${data.Email}">${data.Email}</a> (${data.Name}, ${data.Surname}, ${data.VehicleOfOwner})`;
+    var message = `NEW OWNER! <a href="/api/owners/${data.Email}">${data.Email}</a> (${data.Name}, ${data.Surname}, ${data.VehicleModel})`;
     var $div = $(`<div>${message}</div>`);
     $target.prepend($div);
     window.setTimeout(function () { $div.fadeOut(2000, function () { $div.remove(); }); }, 8000);

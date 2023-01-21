@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UORlBpvutVm/WwfXk3bJOCpjVufpuoEBEq/QMSMmRqinZrZS8yStNf5XUqcYNP+iRpwz1JykFCE+VVxKH8nk+A==",
+  "dgSpecHash": "1U97/ZCh75cZLX+B5+HZQXh28VL/XRgAJclO55Zd0fQMN4W28whERIu33vdDpb9mxPWD80sJ0MI1IdIfm6FKfw==",
   "success": true,
-  "projectFilePath": "D:\\Projects C#\\AutoProject\\Auto.SignalRClient\\Auto.SignalRClient.csproj",
+  "projectFilePath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.SignalRClient\\Auto.SignalRClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\2.2.0\\microsoft.aspnetcore.connections.abstractions.2.2.0.nupkg.sha512",

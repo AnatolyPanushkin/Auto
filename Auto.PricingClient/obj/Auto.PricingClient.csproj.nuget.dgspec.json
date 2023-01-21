@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects C#\\AutoProject\\Auto.PricingClient\\Auto.PricingClient.csproj": {}
+    "C:\\Users\\User\\RiderProjects\\Auto\\Auto.PricingClient\\Auto.PricingClient.csproj": {}
   },
   "projects": {
-    "D:\\Projects C#\\AutoProject\\Auto.PricingClient\\Auto.PricingClient.csproj": {
+    "C:\\Users\\User\\RiderProjects\\Auto\\Auto.PricingClient\\Auto.PricingClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects C#\\AutoProject\\Auto.PricingClient\\Auto.PricingClient.csproj",
+        "projectUniqueName": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.PricingClient\\Auto.PricingClient.csproj",
         "projectName": "Auto.PricingClient",
-        "projectPath": "D:\\Projects C#\\AutoProject\\Auto.PricingClient\\Auto.PricingClient.csproj",
+        "projectPath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.PricingClient\\Auto.PricingClient.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects C#\\AutoProject\\Auto.PricingClient\\obj\\",
+        "outputPath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.PricingClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -59,7 +59,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -68,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

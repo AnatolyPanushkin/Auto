@@ -17,30 +17,28 @@ namespace Auto.NewOwnerNotifier
         
         private static readonly IConfigurationRoot config = ReadConfiguration();
 
-        private const string SUBSCRIBER_ID = "Auto.AuditLog";
+        private const string SUBSCRIBER_ID = "Auto.NewOwnerNotifier";
 
         static async Task Main(string[] args)
         {
             using var bus = RabbitHutch.CreateBus(config.GetConnectionString("AutoRabbitMQ"));
             Console.WriteLine("Connected! Listening for NewOwnerMessage messages.");
-            await bus.PubSub.SubscribeAsync<NewOwnerMessage>(SUBSCRIBER_ID, HandleNewOwnerMessage);
+            await bus.PubSub.SubscribeAsync<NewOwnerMessageWithVehicle>(SUBSCRIBER_ID, HandleNewOwnerMessage);
             Console.ReadKey(true);
         }
 
-        private static async Task HandleNewOwnerMessage(NewOwnerMessage message)
+        private static async Task HandleNewOwnerMessage(NewOwnerMessageWithVehicle message)
         {
             hub = new HubConnectionBuilder().WithUrl(SIGNALR_HUB_URL).Build();
             await hub.StartAsync();
             Console.WriteLine("Hub started!");
             Console.WriteLine("Press any key to send a message (Ctrl-C to quit)");
-            var notifyMessage = JsonConvert.SerializeObject(new NewOwnerMessage()
+            var notifyMessage = JsonConvert.SerializeObject(new NewOwnerMessageWithVehicle()
             {
+                    Email = message.Email,
                     Name = message.Name,
                     Surname = message.Surname,
-                    Email = message.Email,
-                    PhoneNumber = message.PhoneNumber,
-                    VehicleOfOwner = message.VehicleOfOwner,
-                    ListedAtUtc = message.ListedAtUtc
+                    VehicleModel = message.VehicleModel
             });
             await hub.SendAsync("NotifyWebUsersOwner", "Auto.Notifier", notifyMessage);
             Console.WriteLine($"Sent: {notifyMessage}");

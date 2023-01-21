@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bAglLZS1l59iPEBEmKFEVhQuLH3IHEOxFfHku7p+J8LEaRhB/Qb/SOoWfDdZyt27TftlElmGqSIG3aBUDg1ULA==",
+  "dgSpecHash": "UxBJWgdC/wkp2uqLeU9YtNmE3gsjZBm4sHYpey5SjI53bgt4nmnfF0iXRGa3KXGC2+TLYc2esP9Sn6+bsZzVSw==",
   "success": true,
-  "projectFilePath": "D:\\Projects C#\\AutoProject\\Auto.InfoOwnerServer\\Auto.InfoOwnerServer.csproj",
+  "projectFilePath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.InfoOwnerServer\\Auto.InfoOwnerServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\google.protobuf\\3.18.0\\google.protobuf.3.18.0.nupkg.sha512",
@@ -51,6 +51,7 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\requestresponseloggingmiddleware\\1.0.0\\requestresponseloggingmiddleware.1.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

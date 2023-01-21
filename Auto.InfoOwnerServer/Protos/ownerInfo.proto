@@ -13,11 +13,15 @@ service OwnerInfo {
 // The request message containing the user's name.
 message OwnerInfoRequest {
   string email = 1;
+  string name =2;
+  string surname = 3;
+  string registration = 4;
 }
 
 // The response message containing the greetings.
 message OwnerInfoReply {
-  string name = 1;
-  string surname = 2;
-  string registration=3;
+  string email =1;
+  string name = 2;
+  string surname = 3;
+  string vehicle=4;
 }

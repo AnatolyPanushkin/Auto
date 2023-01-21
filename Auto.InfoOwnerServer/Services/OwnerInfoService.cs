@@ -17,7 +17,10 @@ public class OwnerInfoService:OwnerInfo.OwnerInfoBase
 
     public override Task<OwnerInfoReply> GetOwnerInfo(OwnerInfoRequest request, ServerCallContext context)
     {
-        var owner = _db.FindOwnerByEmail(request.Email);
-        return Task.FromResult(new OwnerInfoReply() {Name = owner.Name, Surname = owner.Surname, Registration = owner.VehicleOfOwner.Registration});
+        var vehicle = _db.FindVehicle(request.Registration);
+        return Task.FromResult(new OwnerInfoReply()
+        {
+           Email = request.Email, Name = request.Name, Surname = request.Surname, Vehicle = vehicle.VehicleModel.Name
+        });
     }
 }

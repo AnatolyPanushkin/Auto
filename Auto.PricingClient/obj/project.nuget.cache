@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O6S8/TOdDOi9CTGz+wCmJf+mwz/jWwzSNqH0Cy7TvCNBOX5EcKEyZ18DUU1n5eL3FoBRCely2R/dUSovw6SXNw==",
+  "dgSpecHash": "c1KOpzZTIluCGYId/aWibQF2qIlPCVR+fmXhZAQwopVIU3ygAilvstUD2Y7Ik7lejC6YF8+5LHdx0qYgrdHcqQ==",
   "success": true,
-  "projectFilePath": "D:\\Projects C#\\AutoProject\\Auto.PricingClient\\Auto.PricingClient.csproj",
+  "projectFilePath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.PricingClient\\Auto.PricingClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\grpc.core.api\\2.49.0\\grpc.core.api.2.49.0.nupkg.sha512",

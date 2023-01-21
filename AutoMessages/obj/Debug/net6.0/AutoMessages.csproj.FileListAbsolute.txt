@@ -10,3 +10,15 @@ D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\AutoMessages.dll
 D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\refint\AutoMessages.dll
 D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\AutoMessages.pdb
 D:\Projects C#\AutoProject\AutoMessages\obj\Debug\net6.0\ref\AutoMessages.dll
+C:\Users\User\RiderProjects\Auto\AutoMessages\bin\Debug\net6.0\AutoMessages.deps.json
+C:\Users\User\RiderProjects\Auto\AutoMessages\bin\Debug\net6.0\AutoMessages.dll
+C:\Users\User\RiderProjects\Auto\AutoMessages\bin\Debug\net6.0\AutoMessages.pdb
+C:\Users\User\RiderProjects\Auto\AutoMessages\obj\Debug\net6.0\AutoMessages.csproj.AssemblyReference.cache
+C:\Users\User\RiderProjects\Auto\AutoMessages\obj\Debug\net6.0\AutoMessages.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\RiderProjects\Auto\AutoMessages\obj\Debug\net6.0\AutoMessages.AssemblyInfoInputs.cache
+C:\Users\User\RiderProjects\Auto\AutoMessages\obj\Debug\net6.0\AutoMessages.AssemblyInfo.cs
+C:\Users\User\RiderProjects\Auto\AutoMessages\obj\Debug\net6.0\AutoMessages.csproj.CoreCompileInputs.cache
+C:\Users\User\RiderProjects\Auto\AutoMessages\obj\Debug\net6.0\AutoMessages.dll
+C:\Users\User\RiderProjects\Auto\AutoMessages\obj\Debug\net6.0\refint\AutoMessages.dll
+C:\Users\User\RiderProjects\Auto\AutoMessages\obj\Debug\net6.0\AutoMessages.pdb
+C:\Users\User\RiderProjects\Auto\AutoMessages\obj\Debug\net6.0\ref\AutoMessages.dll

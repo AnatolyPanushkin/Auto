@@ -24,17 +24,18 @@ namespace Auto.InfoOwnerServer {
     static OwnerInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9vd25lckluZm8ucHJvdG8SBW93bmVyIiEKEE93bmVySW5mb1JlcXVlc3QS",
-            "DQoFZW1haWwYASABKAkiRQoOT3duZXJJbmZvUmVwbHkSDAoEbmFtZRgBIAEo",
-            "CRIPCgdzdXJuYW1lGAIgASgJEhQKDHJlZ2lzdHJhdGlvbhgDIAEoCTJLCglP",
-            "d25lckluZm8SPgoMR2V0T3duZXJJbmZvEhcub3duZXIuT3duZXJJbmZvUmVx",
-            "dWVzdBoVLm93bmVyLk93bmVySW5mb1JlcGx5QheqAhRBdXRvLkluZm9Pd25l",
-            "clNlcnZlcmIGcHJvdG8z"));
+            "Cg9vd25lckluZm8ucHJvdG8SBW93bmVyIlYKEE93bmVySW5mb1JlcXVlc3QS",
+            "DQoFZW1haWwYASABKAkSDAoEbmFtZRgCIAEoCRIPCgdzdXJuYW1lGAMgASgJ",
+            "EhQKDHJlZ2lzdHJhdGlvbhgEIAEoCSJPCg5Pd25lckluZm9SZXBseRINCgVl",
+            "bWFpbBgBIAEoCRIMCgRuYW1lGAIgASgJEg8KB3N1cm5hbWUYAyABKAkSDwoH",
+            "dmVoaWNsZRgEIAEoCTJLCglPd25lckluZm8SPgoMR2V0T3duZXJJbmZvEhcu",
+            "b3duZXIuT3duZXJJbmZvUmVxdWVzdBoVLm93bmVyLk93bmVySW5mb1JlcGx5",
+            "QheqAhRBdXRvLkluZm9Pd25lclNlcnZlcmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Auto.InfoOwnerServer.OwnerInfoRequest), global::Auto.InfoOwnerServer.OwnerInfoRequest.Parser, new[]{ "Email" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Auto.InfoOwnerServer.OwnerInfoReply), global::Auto.InfoOwnerServer.OwnerInfoReply.Parser, new[]{ "Name", "Surname", "Registration" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Auto.InfoOwnerServer.OwnerInfoRequest), global::Auto.InfoOwnerServer.OwnerInfoRequest.Parser, new[]{ "Email", "Name", "Surname", "Registration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Auto.InfoOwnerServer.OwnerInfoReply), global::Auto.InfoOwnerServer.OwnerInfoReply.Parser, new[]{ "Email", "Name", "Surname", "Vehicle" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,6 +80,9 @@ namespace Auto.InfoOwnerServer {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OwnerInfoRequest(OwnerInfoRequest other) : this() {
       email_ = other.email_;
+      name_ = other.name_;
+      surname_ = other.surname_;
+      registration_ = other.registration_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -100,6 +104,42 @@ namespace Auto.InfoOwnerServer {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "surname" field.</summary>
+    public const int SurnameFieldNumber = 3;
+    private string surname_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Surname {
+      get { return surname_; }
+      set {
+        surname_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "registration" field.</summary>
+    public const int RegistrationFieldNumber = 4;
+    private string registration_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Registration {
+      get { return registration_; }
+      set {
+        registration_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -116,6 +156,9 @@ namespace Auto.InfoOwnerServer {
         return true;
       }
       if (Email != other.Email) return false;
+      if (Name != other.Name) return false;
+      if (Surname != other.Surname) return false;
+      if (Registration != other.Registration) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -124,6 +167,9 @@ namespace Auto.InfoOwnerServer {
     public override int GetHashCode() {
       int hash = 1;
       if (Email.Length != 0) hash ^= Email.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Surname.Length != 0) hash ^= Surname.GetHashCode();
+      if (Registration.Length != 0) hash ^= Registration.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -146,6 +192,18 @@ namespace Auto.InfoOwnerServer {
         output.WriteRawTag(10);
         output.WriteString(Email);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Surname.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Surname);
+      }
+      if (Registration.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Registration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -160,6 +218,18 @@ namespace Auto.InfoOwnerServer {
         output.WriteRawTag(10);
         output.WriteString(Email);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Surname.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Surname);
+      }
+      if (Registration.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Registration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -172,6 +242,15 @@ namespace Auto.InfoOwnerServer {
       int size = 0;
       if (Email.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Surname.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Surname);
+      }
+      if (Registration.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Registration);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -187,6 +266,15 @@ namespace Auto.InfoOwnerServer {
       }
       if (other.Email.Length != 0) {
         Email = other.Email;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Surname.Length != 0) {
+        Surname = other.Surname;
+      }
+      if (other.Registration.Length != 0) {
+        Registration = other.Registration;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -207,6 +295,18 @@ namespace Auto.InfoOwnerServer {
             Email = input.ReadString();
             break;
           }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Surname = input.ReadString();
+            break;
+          }
+          case 34: {
+            Registration = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -224,6 +324,18 @@ namespace Auto.InfoOwnerServer {
             break;
           case 10: {
             Email = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Surname = input.ReadString();
+            break;
+          }
+          case 34: {
+            Registration = input.ReadString();
             break;
           }
         }
@@ -270,9 +382,10 @@ namespace Auto.InfoOwnerServer {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OwnerInfoReply(OwnerInfoReply other) : this() {
+      email_ = other.email_;
       name_ = other.name_;
       surname_ = other.surname_;
-      registration_ = other.registration_;
+      vehicle_ = other.vehicle_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -282,8 +395,20 @@ namespace Auto.InfoOwnerServer {
       return new OwnerInfoReply(this);
     }
 
+    /// <summary>Field number for the "email" field.</summary>
+    public const int EmailFieldNumber = 1;
+    private string email_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Email {
+      get { return email_; }
+      set {
+        email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
+    public const int NameFieldNumber = 2;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -295,7 +420,7 @@ namespace Auto.InfoOwnerServer {
     }
 
     /// <summary>Field number for the "surname" field.</summary>
-    public const int SurnameFieldNumber = 2;
+    public const int SurnameFieldNumber = 3;
     private string surname_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -306,15 +431,15 @@ namespace Auto.InfoOwnerServer {
       }
     }
 
-    /// <summary>Field number for the "registration" field.</summary>
-    public const int RegistrationFieldNumber = 3;
-    private string registration_ = "";
+    /// <summary>Field number for the "vehicle" field.</summary>
+    public const int VehicleFieldNumber = 4;
+    private string vehicle_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Registration {
-      get { return registration_; }
+    public string Vehicle {
+      get { return vehicle_; }
       set {
-        registration_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        vehicle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -333,9 +458,10 @@ namespace Auto.InfoOwnerServer {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Email != other.Email) return false;
       if (Name != other.Name) return false;
       if (Surname != other.Surname) return false;
-      if (Registration != other.Registration) return false;
+      if (Vehicle != other.Vehicle) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -343,9 +469,10 @@ namespace Auto.InfoOwnerServer {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Email.Length != 0) hash ^= Email.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Surname.Length != 0) hash ^= Surname.GetHashCode();
-      if (Registration.Length != 0) hash ^= Registration.GetHashCode();
+      if (Vehicle.Length != 0) hash ^= Vehicle.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -364,17 +491,21 @@ namespace Auto.InfoOwnerServer {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Name.Length != 0) {
+      if (Email.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(Email);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteString(Name);
       }
       if (Surname.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(Surname);
       }
-      if (Registration.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Registration);
+      if (Vehicle.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Vehicle);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -386,17 +517,21 @@ namespace Auto.InfoOwnerServer {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
+      if (Email.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(Email);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteString(Name);
       }
       if (Surname.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(Surname);
       }
-      if (Registration.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Registration);
+      if (Vehicle.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Vehicle);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -408,14 +543,17 @@ namespace Auto.InfoOwnerServer {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Email.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (Surname.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Surname);
       }
-      if (Registration.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Registration);
+      if (Vehicle.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Vehicle);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -429,14 +567,17 @@ namespace Auto.InfoOwnerServer {
       if (other == null) {
         return;
       }
+      if (other.Email.Length != 0) {
+        Email = other.Email;
+      }
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
       if (other.Surname.Length != 0) {
         Surname = other.Surname;
       }
-      if (other.Registration.Length != 0) {
-        Registration = other.Registration;
+      if (other.Vehicle.Length != 0) {
+        Vehicle = other.Vehicle;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -454,15 +595,19 @@ namespace Auto.InfoOwnerServer {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Name = input.ReadString();
+            Email = input.ReadString();
             break;
           }
           case 18: {
-            Surname = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 26: {
-            Registration = input.ReadString();
+            Surname = input.ReadString();
+            break;
+          }
+          case 34: {
+            Vehicle = input.ReadString();
             break;
           }
         }
@@ -481,15 +626,19 @@ namespace Auto.InfoOwnerServer {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Name = input.ReadString();
+            Email = input.ReadString();
             break;
           }
           case 18: {
-            Surname = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 26: {
-            Registration = input.ReadString();
+            Surname = input.ReadString();
+            break;
+          }
+          case 34: {
+            Vehicle = input.ReadString();
             break;
           }
         }

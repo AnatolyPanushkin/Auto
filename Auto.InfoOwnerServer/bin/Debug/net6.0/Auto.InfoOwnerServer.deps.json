@@ -9,7 +9,8 @@
       "Auto.InfoOwnerServer/1.0.0": {
         "dependencies": {
           "Auto.Data": "1.0.0",
-          "Grpc.AspNetCore": "2.40.0"
+          "Grpc.AspNetCore": "2.40.0",
+          "RequestResponseLoggingMiddleware": "1.0.0"
         },
         "runtime": {
           "Auto.InfoOwnerServer.dll": {}
@@ -545,6 +546,14 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.1.20720"
+          }
+        }
+      },
+      "RequestResponseLoggingMiddleware/1.0.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/RequestResponseLoggingMiddleware.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -1818,6 +1827,13 @@
       "sha512": "sha512-ebWzW9j2nwxQeBo59As2TYn7nYr9BHicqqCwHOD1Vdo+50HBtLPuqdiCYJcLdTRknpYis/DSEOQz5KmZxwrIAg==",
       "path": "newtonsoft.json/10.0.1",
       "hashPath": "newtonsoft.json.10.0.1.nupkg.sha512"
+    },
+    "RequestResponseLoggingMiddleware/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3FAJxdZwHWq0Qsdm4xnjWz0ka5MK/In65REes8vP1TiRE59T9lZPkqwPG39A0BGCIeUqeJh6wbN5QfrVL3WI8A==",
+      "path": "requestresponseloggingmiddleware/1.0.0",
+      "hashPath": "requestresponseloggingmiddleware.1.0.0.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

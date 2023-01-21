@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects C#\\AutoProject\\Auto.InfoOwnerServer\\Auto.InfoOwnerServer.csproj": {}
+    "C:\\Users\\User\\RiderProjects\\Auto\\Auto.InfoOwnerServer\\Auto.InfoOwnerServer.csproj": {}
   },
   "projects": {
-    "D:\\Projects C#\\AutoProject\\Auto.Data\\Auto.Data.csproj": {
+    "C:\\Users\\User\\RiderProjects\\Auto\\Auto.Data\\Auto.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects C#\\AutoProject\\Auto.Data\\Auto.Data.csproj",
+        "projectUniqueName": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.Data\\Auto.Data.csproj",
         "projectName": "Auto.Data",
-        "projectPath": "D:\\Projects C#\\AutoProject\\Auto.Data\\Auto.Data.csproj",
+        "projectPath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.Data\\Auto.Data.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects C#\\AutoProject\\Auto.Data\\obj\\",
+        "outputPath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -63,7 +63,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -72,18 +73,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects C#\\AutoProject\\Auto.InfoOwnerServer\\Auto.InfoOwnerServer.csproj": {
+    "C:\\Users\\User\\RiderProjects\\Auto\\Auto.InfoOwnerServer\\Auto.InfoOwnerServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects C#\\AutoProject\\Auto.InfoOwnerServer\\Auto.InfoOwnerServer.csproj",
+        "projectUniqueName": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.InfoOwnerServer\\Auto.InfoOwnerServer.csproj",
         "projectName": "Auto.InfoOwnerServer",
-        "projectPath": "D:\\Projects C#\\AutoProject\\Auto.InfoOwnerServer\\Auto.InfoOwnerServer.csproj",
+        "projectPath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.InfoOwnerServer\\Auto.InfoOwnerServer.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects C#\\AutoProject\\Auto.InfoOwnerServer\\obj\\",
+        "outputPath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.InfoOwnerServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -98,8 +99,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Projects C#\\AutoProject\\Auto.Data\\Auto.Data.csproj": {
-                "projectPath": "D:\\Projects C#\\AutoProject\\Auto.Data\\Auto.Data.csproj"
+              "C:\\Users\\User\\RiderProjects\\Auto\\Auto.Data\\Auto.Data.csproj": {
+                "projectPath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.Data\\Auto.Data.csproj"
               }
             }
           }
@@ -117,6 +118,10 @@
             "Grpc.AspNetCore": {
               "target": "Package",
               "version": "[2.40.0, )"
+            },
+            "RequestResponseLoggingMiddleware": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [
@@ -125,7 +130,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -137,7 +143,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

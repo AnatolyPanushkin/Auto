@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ZVqGNRcqyF36GzW+3DFJREZkZLYcKg2m9kfH2oExAEHMwNnKb0EkbsPZGMJIQJViQJHb1qf3RlPzQsjZ2RJAsg==",
+  "dgSpecHash": "moyj/fmHn9a3h4j0uOfusbz/M1yJL3aeV/tdThnWLkyRwvrg9G1lYtnN5X/x1beWzW/M35Panz28tCAde+lvxw==",
   "success": true,
-  "projectFilePath": "D:\\Projects C#\\AutoProject\\Auto.AuditLog\\Auto.AuditLog.csproj",
+  "projectFilePath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.AuditLog\\Auto.AuditLog.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\easynetq\\7.2.0\\easynetq.7.2.0.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\easynetq.serialization.newtonsoftjson\\7.2.0\\easynetq.serialization.newtonsoftjson.7.2.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\easynetq\\8.0.0-alpha5\\easynetq.8.0.0-alpha5.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\easynetq.serialization.newtonsoftjson\\8.0.0-alpha5\\easynetq.serialization.newtonsoftjson.8.0.0-alpha5.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.configuration.environmentvariables\\6.0.1\\microsoft.extensions.configuration.environmentvariables.6.0.1.nupkg.sha512",

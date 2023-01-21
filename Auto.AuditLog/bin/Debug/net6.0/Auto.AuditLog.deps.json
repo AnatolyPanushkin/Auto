@@ -9,8 +9,8 @@
       "Auto.AuditLog/1.0.0": {
         "dependencies": {
           "AutoMessages": "1.0.0",
-          "EasyNetQ": "7.2.0",
-          "EasyNetQ.Serialization.NewtonsoftJson": "7.2.0",
+          "EasyNetQ": "8.0.0-alpha5",
+          "EasyNetQ.Serialization.NewtonsoftJson": "8.0.0-alpha5",
           "Microsoft.Extensions.Configuration": "6.0.1",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "6.0.1",
@@ -21,26 +21,26 @@
           "Auto.AuditLog.dll": {}
         }
       },
-      "EasyNetQ/7.2.0": {
+      "EasyNetQ/8.0.0-alpha5": {
         "dependencies": {
           "RabbitMQ.Client": "6.4.0"
         },
         "runtime": {
-          "lib/netstandard2.0/EasyNetQ.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.2.0.0"
+          "lib/net6.0/EasyNetQ.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
           }
         }
       },
-      "EasyNetQ.Serialization.NewtonsoftJson/7.2.0": {
+      "EasyNetQ.Serialization.NewtonsoftJson/8.0.0-alpha5": {
         "dependencies": {
-          "EasyNetQ": "7.2.0",
+          "EasyNetQ": "8.0.0-alpha5",
           "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
-          "lib/netstandard2.0/EasyNetQ.Serialization.NewtonsoftJson.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.2.0.0"
+          "lib/net6.0/EasyNetQ.Serialization.NewtonsoftJson.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
           }
         }
       },
@@ -199,19 +199,19 @@
       "serviceable": false,
       "sha512": ""
     },
-    "EasyNetQ/7.2.0": {
+    "EasyNetQ/8.0.0-alpha5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tuN/1Exjgw5IeI4K1rjtgn4QUpRBZ6ymkFS5u9CtGHw9Pvi4JNieQgKPeu7HbovYdBRZkHxVq7eh5VQwPtymlQ==",
-      "path": "easynetq/7.2.0",
-      "hashPath": "easynetq.7.2.0.nupkg.sha512"
+      "sha512": "sha512-/0LDVthrE9/LUpdHY4i9a2U5D1zD/AEv7LZ1ZYEC0MCL0MSZRqdXlXipHAIYcNnNoq4t+EBEP6I7fScu1PCYCQ==",
+      "path": "easynetq/8.0.0-alpha5",
+      "hashPath": "easynetq.8.0.0-alpha5.nupkg.sha512"
     },
-    "EasyNetQ.Serialization.NewtonsoftJson/7.2.0": {
+    "EasyNetQ.Serialization.NewtonsoftJson/8.0.0-alpha5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ldVmi8suEPheS60kv3zHFZ2+eWktFn91NyaMyZoDexey4b7ujZ6PqoOOpOAtedS9pubUCp0LBiz/NOwOtSwskA==",
-      "path": "easynetq.serialization.newtonsoftjson/7.2.0",
-      "hashPath": "easynetq.serialization.newtonsoftjson.7.2.0.nupkg.sha512"
+      "sha512": "sha512-FPGvMJikdfNSgDhjH+HuEaF2e40oQfsC8eMZo0xFFau7drBXmMtEeBDpm3B8ndyFwIPBwVAVGHgu2XIhPcKzuw==",
+      "path": "easynetq.serialization.newtonsoftjson/8.0.0-alpha5",
+      "hashPath": "easynetq.serialization.newtonsoftjson.8.0.0-alpha5.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/6.0.1": {
       "type": "package",

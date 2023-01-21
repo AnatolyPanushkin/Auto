@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vYBTCZocfvMtFQldtSGjn5G5N/xwHbNUONuyc16MSYV+//9wdY/ptFRB4hhYipp37LYLegI7lLkFmnw1UUuxiA==",
+  "dgSpecHash": "kZZZp3Ck2S9WPlM2RTqWrNaubMNp8WifHHsaHH+21PwGasFxaJosI0esMKZfDVAwGi67Fq6+KQ5ua5Bbzrqc1Q==",
   "success": true,
-  "projectFilePath": "D:\\Projects C#\\AutoProject\\Auto.PricingServer\\Auto.PricingServer.csproj",
+  "projectFilePath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.PricingServer\\Auto.PricingServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\google.protobuf\\3.18.0\\google.protobuf.3.18.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\grpc.aspnetcore\\2.40.0\\grpc.aspnetcore.2.40.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects C#\\AutoProject\\Auto.PricingServer\\Auto.PricingServer.csproj": {}
+    "C:\\Users\\User\\RiderProjects\\Auto\\Auto.PricingServer\\Auto.PricingServer.csproj": {}
   },
   "projects": {
-    "D:\\Projects C#\\AutoProject\\Auto.PricingServer\\Auto.PricingServer.csproj": {
+    "C:\\Users\\User\\RiderProjects\\Auto\\Auto.PricingServer\\Auto.PricingServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects C#\\AutoProject\\Auto.PricingServer\\Auto.PricingServer.csproj",
+        "projectUniqueName": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.PricingServer\\Auto.PricingServer.csproj",
         "projectName": "Auto.PricingServer",
-        "projectPath": "D:\\Projects C#\\AutoProject\\Auto.PricingServer\\Auto.PricingServer.csproj",
+        "projectPath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.PricingServer\\Auto.PricingServer.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects C#\\AutoProject\\Auto.PricingServer\\obj\\",
+        "outputPath": "C:\\Users\\User\\RiderProjects\\Auto\\Auto.PricingServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -49,7 +49,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -61,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

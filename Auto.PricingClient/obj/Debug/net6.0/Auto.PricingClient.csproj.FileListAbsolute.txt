@@ -19,3 +19,24 @@ D:\Projects C#\AutoProject\Auto.PricingClient\obj\Debug\net6.0\refint\Auto.Prici
 D:\Projects C#\AutoProject\Auto.PricingClient\obj\Debug\net6.0\Auto.PricingClient.pdb
 D:\Projects C#\AutoProject\Auto.PricingClient\obj\Debug\net6.0\Auto.PricingClient.genruntimeconfig.cache
 D:\Projects C#\AutoProject\Auto.PricingClient\obj\Debug\net6.0\ref\Auto.PricingClient.dll
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\bin\Debug\net6.0\Auto.PricingClient.exe
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\bin\Debug\net6.0\Auto.PricingClient.deps.json
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\bin\Debug\net6.0\Auto.PricingClient.runtimeconfig.json
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\bin\Debug\net6.0\Auto.PricingClient.dll
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\bin\Debug\net6.0\Auto.PricingClient.pdb
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\bin\Debug\net6.0\Google.Protobuf.dll
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\bin\Debug\net6.0\Grpc.Core.Api.dll
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\bin\Debug\net6.0\Grpc.Net.Client.dll
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\bin\Debug\net6.0\Grpc.Net.Common.dll
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\obj\Debug\net6.0\Auto.PricingClient.csproj.AssemblyReference.cache
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\obj\Debug\net6.0\Auto.PricingClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\obj\Debug\net6.0\Auto.PricingClient.AssemblyInfoInputs.cache
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\obj\Debug\net6.0\Auto.PricingClient.AssemblyInfo.cs
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\obj\Debug\net6.0\Auto.PricingClient.csproj.CoreCompileInputs.cache
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\obj\Debug\net6.0\Auto.PricingClient.csproj.CopyComplete
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\obj\Debug\net6.0\Auto.PricingClient.dll
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\obj\Debug\net6.0\refint\Auto.PricingClient.dll
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\obj\Debug\net6.0\Auto.PricingClient.pdb
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\obj\Debug\net6.0\Auto.PricingClient.genruntimeconfig.cache
+C:\Users\User\RiderProjects\Auto\Auto.PricingClient\obj\Debug\net6.0\ref\Auto.PricingClient.dll
