@@ -7,7 +7,9 @@ using Auto.Data.Entities;
 using Auto.Website.Models;
 using AutoMessages;
 using EasyNetQ;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
+using IBus = EasyNetQ.IBus;
 
 namespace Auto.Website.Controllers.Api;
 
@@ -19,11 +21,13 @@ public class OwnersController:ControllerBase
 {
     private readonly IAutoDatabase _db;
     private readonly IBus _bus;
+    readonly IPublishEndpoint _publishEndpoint;
 
-    public OwnersController(IAutoDatabase db,IBus bus)
+    public OwnersController(IAutoDatabase db,IBus bus, IPublishEndpoint publishEndpoint)
     {
         _db = db;
         _bus = bus;
+        _publishEndpoint = publishEndpoint;
     }
 
     [HttpGet]
@@ -60,7 +64,7 @@ public class OwnersController:ControllerBase
             var json = owner.ToDynamic();
             json._links = new {
                 self = new { href = $"/api/owners/{email}" },
-                vehicle = new { href = $"/api/vehicle/{owner.VehicleOfOwner.Registration}" }
+                vehicle = new { href = $"/api/vehicles/{owner.VehicleOfOwner.Registration}" }
             };
             json._actions = new {
                 update = new {
@@ -161,7 +165,15 @@ public class OwnersController:ControllerBase
             };
             _db.CreateOwner(newOwner);
             PublishNewOwnerMessage(newOwner);
-			
+            /*await _publishEndpoint.Publish<NewOwnerMessage>(new()
+            {
+                Name = dto.Name,
+                Surname = dto.Surname,
+                PhoneNumber = dto.PhoneNumber,
+                Email = dto.Email,
+                VehicleOfOwner = newVehicle.Registration
+            });*/
+                
             var json = newOwner.ToDynamic();
             json._links = new {
                 self = new { href = $"/api/owners/{newOwner.Email}" },

@@ -21,16 +21,18 @@ namespace Auto.NewOwnerNotifier
 
         static async Task Main(string[] args)
         {
+            hub = new HubConnectionBuilder().WithUrl(SIGNALR_HUB_URL).Build();
+            await hub.StartAsync();
+            
             using var bus = RabbitHutch.CreateBus(config.GetConnectionString("AutoRabbitMQ"));
             Console.WriteLine("Connected! Listening for NewOwnerMessage messages.");
+            
             await bus.PubSub.SubscribeAsync<NewOwnerMessageWithVehicle>(SUBSCRIBER_ID, HandleNewOwnerMessage);
             Console.ReadKey(true);
         }
 
         private static async Task HandleNewOwnerMessage(NewOwnerMessageWithVehicle message)
         {
-            hub = new HubConnectionBuilder().WithUrl(SIGNALR_HUB_URL).Build();
-            await hub.StartAsync();
             Console.WriteLine("Hub started!");
             Console.WriteLine("Press any key to send a message (Ctrl-C to quit)");
             var notifyMessage = JsonConvert.SerializeObject(new NewOwnerMessageWithVehicle()

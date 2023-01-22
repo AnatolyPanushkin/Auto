@@ -2,7 +2,10 @@
 
 using AutoMessages;
 using EasyNetQ;
+using MassTransit;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+
 
 namespace Auto.AuditLog
 {
@@ -14,9 +17,23 @@ namespace Auto.AuditLog
 
         static async Task Main(string[] args)
         {
-            using var bus = RabbitHutch.CreateBus(config.GetConnectionString("AutoRabbitMQ"));
+            await Host.CreateDefaultBuilder(args)
+                .ConfigureServices(services =>
+                {
+                    services.AddMassTransit(x =>
+                    {
+                        x.AddConsumer<NewOwnerConsumer>(typeof(NewOwnerConsumerDefinition));
+
+                        x.SetKebabCaseEndpointNameFormatter();
+
+                        x.UsingRabbitMq((context, cfg) => cfg.ConfigureEndpoints(context));
+                    });
+                }).Build()
+                .RunAsync();
+            
+            /*using var bus = RabbitHutch.CreateBus(config.GetConnectionString("AutoRabbitMQ"));
             Console.WriteLine("Connected! Listening for NewVehicleMessage messages.");
-            await bus.PubSub.SubscribeAsync<NewOwnerMessage>(SUBSCRIBER_ID, HandleNewOwnerMessage);
+            await bus.PubSub.SubscribeAsync<NewOwnerMessage>(SUBSCRIBER_ID, HandleNewOwnerMessage);*/
             Console.ReadKey(true);
         }
 

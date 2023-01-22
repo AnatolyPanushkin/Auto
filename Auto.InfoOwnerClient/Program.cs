@@ -13,13 +13,14 @@ namespace Auto.InfoOwnerClient
         private static readonly IConfigurationRoot config = ReadConfiguration();
 
         private const string SUBSCRIBER_ID = "Auto.InfoOwnerClient";
-        
+
+        private static IBus _bus;
+            
       
         static async Task Main(String[] args)
         {
-            using var bus = RabbitHutch.CreateBus(config.GetConnectionString("AutoRabbitMQ"));
-            Console.WriteLine("Connected! Listening for NewOwnerMessage messages.");
-            await bus.PubSub.SubscribeAsync<NewOwnerMessage>(SUBSCRIBER_ID, HandleNewOwnerMessage);
+            _bus = RabbitHutch.CreateBus(config.GetConnectionString("AutoRabbitMQ"));
+            await _bus.PubSub.SubscribeAsync<NewOwnerMessage>(SUBSCRIBER_ID, HandleNewOwnerMessage);
             Console.ReadKey(true);
         }
         
@@ -39,16 +40,21 @@ namespace Auto.InfoOwnerClient
 
             var reply = grpcClient.GetOwnerInfo(request);
 
-            var newOwnerMessageWithVehicle = new NewOwnerMessageWithVehicle
+            /*var newOwnerMessageWithVehicle = new NewOwnerMessageWithVehicle
             {
                 Email = reply.Email,
                 Name = reply.Name,
                 Surname = reply.Surname,
                 VehicleModel = reply.Vehicle
-            };
-            
-            using var bus = RabbitHutch.CreateBus(config.GetConnectionString("AutoRabbitMQ"));
-            bus.PubSub.Publish(newOwnerMessageWithVehicle);
+            };*/
+            await _bus.PubSub.PublishAsync(new NewOwnerMessageWithVehicle()
+            {
+                Email = reply.Email,
+                Name = reply.Name,
+                Surname = reply.Surname,
+                VehicleModel = reply.Vehicle
+            });
+            //await Bus.PubSub.PublishAsync(newOwnerMessageWithVehicle);
         }
         
         private static IConfigurationRoot ReadConfiguration()

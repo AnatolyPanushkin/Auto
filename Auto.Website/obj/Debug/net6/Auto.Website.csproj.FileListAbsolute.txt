@@ -277,3 +277,8 @@ C:\Users\User\RiderProjects\Auto\Auto.Website\obj\Debug\net6\Auto.Website.xml
 C:\Users\User\RiderProjects\Auto\Auto.Website\obj\Debug\net6\Auto.Website.pdb
 C:\Users\User\RiderProjects\Auto\Auto.Website\obj\Debug\net6\Auto.Website.genruntimeconfig.cache
 C:\Users\User\RiderProjects\Auto\Auto.Website\obj\Debug\net6\ref\Auto.Website.dll
+C:\Users\User\RiderProjects\Auto\Auto.Website\bin\Debug\net6\MassTransit.dll
+C:\Users\User\RiderProjects\Auto\Auto.Website\bin\Debug\net6\MassTransit.Abstractions.dll
+C:\Users\User\RiderProjects\Auto\Auto.Website\bin\Debug\net6\MassTransit.RabbitMqTransport.dll
+C:\Users\User\RiderProjects\Auto\Auto.Website\bin\Debug\net6\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\User\RiderProjects\Auto\Auto.Website\bin\Debug\net6\System.Text.Json.dll

@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.IO;
 using System.Reflection;
+using Auto.Website.Controllers.Api;
 using Auto.Website.GraphQL.Schemas;
 using Auto.Website.Hubs;
 using EasyNetQ;
@@ -14,6 +15,8 @@ using GraphQL.Server;
 using GraphQL.Types;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.SignalR;
+using MassTransit;
+using IBus = EasyNetQ.IBus;
 
 
 namespace Auto.Website {
@@ -23,7 +26,7 @@ namespace Auto.Website {
             Configuration = configuration;
         }
         public IConfiguration Configuration { get; }
-
+        
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddRouting(options => options.LowercaseUrls = true);
@@ -47,6 +50,12 @@ namespace Auto.Website {
             var bus = RabbitHutch.CreateBus(Configuration.GetConnectionString("AutoRabbitMQ"));
             services.AddSingleton<IBus>(bus);
             
+            
+            services.AddMassTransit(x =>
+            {
+                x.UsingRabbitMq();
+            });
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
